@@ -1,10 +1,7 @@
 module.exports = {
     default: {
-        import: ["./step-definitions/**/*.js"],
+        require: ["./step-definitions/*.js"],
         format: ["pretty"],
-        publishQuiet: true,
-        worldParameters: {
-            browser: "chromium",
-        },
     },
 };
+
