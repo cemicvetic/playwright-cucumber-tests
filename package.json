@@ -1,23 +1,14 @@
 {
-  "name": "playwright-cucumber-tests",
+  "name": "playwright-cucumber-saucedemo",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "type": "commonjs",
-  "author": "Lana Komarova",
-  "license": "ISC",
-  "dependencies": {
-    "dotenv": "^16.4.7"
+    "cucumber": "cucumber-js --config cucumber.js"
   },
   "devDependencies": {
+    "@playwright/test": "^1.50.1",
     "@cucumber/cucumber": "^11.2.0",
-    "chai": "^5.1.2",
-    "playwright": "^1.50.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "chai": "^4.3.7"
   }
 }
