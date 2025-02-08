@@ -1,0 +1,139 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "saucedemo-login-functionality;successful-login",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Successful login",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open the SauceDemo login page",
+            "match": {
+              "location": "src\\tests\\step-definitions\\login.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1126715100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I enter valid credentials",
+            "match": {
+              "location": "src\\tests\\step-definitions\\login.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 83839900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I click the login button",
+            "match": {
+              "location": "src\\tests\\step-definitions\\login.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 103987299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I should see the inventory page",
+            "match": {
+              "location": "src\\tests\\step-definitions\\login.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18005999
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "saucedemo-login-functionality;unsuccessful-login",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Unsuccessful login",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "I open the SauceDemo login page",
+            "match": {
+              "location": "src\\tests\\step-definitions\\login.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 848977399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I enter invalid credentials",
+            "match": {
+              "location": "src\\tests\\step-definitions\\login.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 57106399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I click the login button",
+            "match": {
+              "location": "src\\tests\\step-definitions\\login.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 65507200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should see an error message",
+            "match": {
+              "location": "src\\tests\\step-definitions\\login.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20096599
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "saucedemo-login-functionality",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "SauceDemo Login Functionality",
+    "tags": [],
+    "uri": "src\\tests\\features\\login.feature"
+  }
+]
