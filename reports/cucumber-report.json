@@ -15,11 +15,11 @@
             "line": 4,
             "name": "I open the SauceDemo login page",
             "match": {
-              "location": "src\\tests\\step-definitions\\login.ts:8"
+              "location": "src\\tests\\step-definitions\\login.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 1624905899
+              "duration": 1508778299
             }
           },
           {
@@ -28,11 +28,11 @@
             "line": 5,
             "name": "I enter valid credentials",
             "match": {
-              "location": "src\\tests\\step-definitions\\login.ts:15"
+              "location": "src\\tests\\step-definitions\\login.ts:25"
             },
             "result": {
               "status": "passed",
-              "duration": 68944800
+              "duration": 1085025399
             }
           },
           {
@@ -41,11 +41,11 @@
             "line": 6,
             "name": "I click the login button",
             "match": {
-              "location": "src\\tests\\step-definitions\\login.ts:27"
+              "location": "src\\tests\\step-definitions\\login.ts:37"
             },
             "result": {
               "status": "passed",
-              "duration": 87138600
+              "duration": 601593600
             }
           },
           {
@@ -54,11 +54,11 @@
             "line": 7,
             "name": "I should see the inventory page",
             "match": {
-              "location": "src\\tests\\step-definitions\\login.ts:32"
+              "location": "src\\tests\\step-definitions\\login.ts:42"
             },
             "result": {
               "status": "passed",
-              "duration": 19557000
+              "duration": 15049989799
             }
           }
         ],
@@ -78,11 +78,11 @@
             "line": 10,
             "name": "I open the SauceDemo login page",
             "match": {
-              "location": "src\\tests\\step-definitions\\login.ts:8"
+              "location": "src\\tests\\step-definitions\\login.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 1176804899
+              "duration": 1779509600
             }
           },
           {
@@ -91,11 +91,11 @@
             "line": 11,
             "name": "I enter invalid credentials",
             "match": {
-              "location": "src\\tests\\step-definitions\\login.ts:21"
+              "location": "src\\tests\\step-definitions\\login.ts:31"
             },
             "result": {
               "status": "passed",
-              "duration": 51001899
+              "duration": 1079227999
             }
           },
           {
@@ -104,11 +104,11 @@
             "line": 12,
             "name": "I click the login button",
             "match": {
-              "location": "src\\tests\\step-definitions\\login.ts:27"
+              "location": "src\\tests\\step-definitions\\login.ts:37"
             },
             "result": {
               "status": "passed",
-              "duration": 50736299
+              "duration": 566884799
             }
           },
           {
@@ -117,11 +117,11 @@
             "line": 13,
             "name": "I should see an error message",
             "match": {
-              "location": "src\\tests\\step-definitions\\login.ts:39"
+              "location": "src\\tests\\step-definitions\\login.ts:52"
             },
             "result": {
               "status": "passed",
-              "duration": 23932099
+              "duration": 5847505800
             }
           }
         ],

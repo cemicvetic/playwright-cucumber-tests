@@ -1,44 +1,60 @@
-import { Given, When, Then } from "@cucumber/cucumber";
+import { Given, When, Then, setDefaultTimeout } from "@cucumber/cucumber";
 import { Page, Browser, chromium, expect } from "@playwright/test";
 
 let browser: Browser;
 let page: Page;
 
-// Open the SauceDemo login page
-Given("I open the SauceDemo login page", async function () {
-    browser = await chromium.launch({ headless: false });
-    page = await browser.newPage();
+// ✅ Set the default timeout to 30 seconds
+setDefaultTimeout(30000);
+
+// ✅ Step 1: Open the SauceDemo login page
+Given("I open the SauceDemo login page", { timeout: 30000 }, async function () {
+    browser = await chromium.launch({
+        headless: false,
+        slowMo: 500
+    });
+
+    const context = await browser.newContext();
+    await context.tracing.start({ screenshots: true, snapshots: true });
+
+    page = await context.newPage();
     await page.goto("https://www.saucedemo.com/");
 });
 
-// Enter valid credentials
-When("I enter valid credentials", async function () {
+// ✅ Step 2: Enter valid login credentials
+When("I enter valid credentials", { timeout: 30000 }, async function () {
     await page.fill('input[data-test="username"]', "standard_user");
     await page.fill('input[data-test="password"]', "secret_sauce");
 });
 
-// Enter invalid credentials
-When("I enter invalid credentials", async function () {
+// ✅ Step 3: Enter invalid login credentials
+When("I enter invalid credentials", { timeout: 30000 }, async function () {
     await page.fill('input[data-test="username"]', "wrong_user");
     await page.fill('input[data-test="password"]', "wrong_pass");
 });
 
-// Click the login button
-When("I click the login button", async function () {
+// ✅ Step 4: Click the login button
+When("I click the login button", { timeout: 30000 }, async function () {
     await page.click('input[data-test="login-button"]');
 });
 
-// Verify successful login
-Then("I should see the inventory page", async function () {
-    await page.waitForSelector(".inventory_list");
+// ✅ Step 5: Verify successful login
+Then("I should see the inventory page", { timeout: 30000 }, async function () {
+    await page.waitForSelector(".inventory_list", { timeout: 10000 });
     expect(await page.url()).toContain("inventory.html");
-    //await browser.close();
+
+    await page.pause();
+    await page.context().tracing.stop({ path: "trace.zip" });
+    await browser.close();
 });
 
-// Verify unsuccessful login
-Then("I should see an error message", async function () {
-    await page.waitForSelector("h3[data-test='error']");
+// ✅ Step 6: Verify error message for invalid login
+Then("I should see an error message", { timeout: 30000 }, async function () {
+    await page.waitForSelector("h3[data-test='error']", { timeout: 10000 });
     const errorMessage = await page.textContent("h3[data-test='error']");
     expect(errorMessage).toContain("Epic sadface: Username and password do not match any user in this service");
-   // await browser.close();
+
+    await page.pause();
+    await page.context().tracing.stop({ path: "trace.zip" });
+    await browser.close();
 });
