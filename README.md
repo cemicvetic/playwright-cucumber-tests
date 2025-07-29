@@ -1,6 +1,6 @@
 # Playwright + Cucumber BDD Testing for SauceDemo
 
-## 🚀 Overview
+## Overview
 
 This project automates the login functionality of SauceDemo using Playwright and Cucumber with TypeScript.
 
@@ -18,13 +18,13 @@ playwright-cucumber-saucedemo/
 ├── README.md                   # Documentation
 ```
 
-## ✨ 
+## 
 
 - Node.js (LTS version)
 - Visual Studio Code / WebStorm
 - VS Code Extensions (Cucumber, Playwright)
 
-## 🚀 Installation
+##  Installation
 
 Clone the repository and install dependencies:
 
@@ -121,6 +121,15 @@ npm run cucumber
 After running tests, reports are generated in the `reports/` directory:
 
 - **HTML Report:** `reports/cucumber-report.html`
+
+Passed Test Example
+
+<img src="https://github.com/user-attachments/assets/a2921b02-e04b-4256-8366-61ba290e4608" alt="Test Passed" width="80%" />
+
+Failed Test Example
+
+<img src="https://github.com/user-attachments/assets/eaff2ab9-8f52-42d1-bd56-ee1c2c6125d2" alt="Test Failed" width="80%" />
+
 - **JSON Report:** `reports/cucumber-report.json`
 
 To view the HTML report:
